@@ -1,4 +1,4 @@
-# YuHub oncofertility decision-support study
+# OncoFert-LLM oncofertility decision-support study
 
 This repository contains the public study artifacts and reproducibility tools for
 the manuscript **“Development and validation of a retrieval-augmented generative
