@@ -4,16 +4,16 @@ This repository contains the public study artifacts and reproducibility tools fo
 the manuscript **“Development and validation of a retrieval-augmented generative
 artificial intelligence system for oncofertility decision support.”**
 
-YuHub is a clinician-supervised research system. Nothing in this repository is
+OncoFert-LLM is a clinician-supervised research system. Nothing in this repository is
 medical advice, and the material must not be used for autonomous diagnosis,
 treatment selection, or treatment delay.
 
 ## What is currently included
 
 - `cases_rubric_modelResponse.json`: 20 de-identified clinical cases, their
-  individualized consequence-weighted rubrics, and responses from YuHub,
+  individualized consequence-weighted rubrics, and responses from OncoFert-LLM,
   DeepSeek, and Qwen.
-- `src/yuhub_repro/`: data validation, weighted scoring, case-level statistics,
+- `src/OncoFert-LLM_repro/`: data validation, weighted scoring, case-level statistics,
   MCQ analysis, usability summaries, ICCs, and clustered bootstrap confidence
   intervals.
 - `workflow/reference_architecture.yaml`: a manuscript-derived, non-executable
@@ -42,24 +42,24 @@ Python 3.11 is recommended.
 ```bash
 python -m venv .venv
 python -m pip install -e .
-python -m yuhub_repro validate cases_rubric_modelResponse.json
-python -m yuhub_repro summarize cases_rubric_modelResponse.json
+python -m OncoFert-LLM_repro validate cases_rubric_modelResponse.json
+python -m OncoFert-LLM_repro summarize cases_rubric_modelResponse.json
 ```
 
 Create analysis-ready templates:
 
 ```bash
-python -m yuhub_repro make-ratings-template \
+python -m OncoFert-LLM_repro make-ratings-template \
   cases_rubric_modelResponse.json templates/case_ratings.csv
-python -m yuhub_repro make-mcq-template templates/mcq_responses.csv
+python -m OncoFert-LLM_repro make-mcq-template templates/mcq_responses.csv
 ```
 
 After filling the templates with the original evaluator records:
 
 ```bash
-python -m yuhub_repro analyze-cases templates/case_ratings.csv results/cases
-python -m yuhub_repro analyze-mcq templates/mcq_responses.csv results/mcq
-python -m yuhub_repro analyze-usability templates/usability_literacy.csv results/usability
+python -m OncoFert-LLM_repro analyze-cases templates/case_ratings.csv results/cases
+python -m OncoFert-LLM_repro analyze-mcq templates/mcq_responses.csv results/mcq
+python -m OncoFert-LLM_repro analyze-usability templates/usability_literacy.csv results/usability
 ```
 
 Each analysis writes tidy CSV outputs plus a JSON summary containing the random
@@ -72,7 +72,7 @@ seed, bootstrap count, input hash, software versions, and statistical results.
 |-- cases_rubric_modelResponse.json
 |-- docs/
 |-- prompts/                  # exact prompts still required from authors
-|-- src/yuhub_repro/
+|-- src/OncoFert-LLM_repro/
 |-- templates/
 |-- tests/
 `-- workflow/
