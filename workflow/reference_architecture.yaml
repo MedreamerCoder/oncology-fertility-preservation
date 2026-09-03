@@ -1,0 +1,64 @@
+artifact_kind: manuscript-derived-reference
+executable: false
+provenance: reconstructed from manuscript Methods sections 2.1-2.3
+warning: exact Dify export and production configuration were not present in the source repository
+platform:
+  orchestrator: Dify
+  document_and_metadata_store: PostgreSQL
+  graph_store: Neo4j
+  indexing:
+    - RAGFlow
+    - GraphRAG
+  reranker: gte-rerank
+  disclosed_foundation_models:
+    - Qwen-3.6-plus
+    - DeepSeek-V4-pro
+workflow:
+  - id: input_and_document_ingestion
+    disclosed_behavior: accept text, clinical documents, and images
+    exact_configuration_released: false
+  - id: primary_intent_recognition
+    disclosed_outputs:
+      - report_interpretation
+      - cancer_fertility_counselling
+      - non_cancer_fertility_consultation
+      - general_oncology_query
+    exact_prompt_released: false
+  - id: precise_intent_determination
+    disclosed_behavior: second-layer intent filtering
+    exact_prompt_released: false
+  - id: multimodal_extraction
+    disclosed_behavior: extract features from uploaded reports and images
+    exact_model_and_prompt_released: false
+  - id: clinical_entity_extraction
+    disclosed_behavior: parallel extraction of stage, pathology, and other variables
+    output_variable: Medical_Entities
+    exact_schema_released: false
+  - id: missing_information_detection
+    disclosed_behavior: identify variables needed for eligibility, timing, and safety
+    exact_rules_released: false
+  - id: dynamic_path_selection
+    disclosed_inputs:
+      - input_format
+      - health_status
+      - marital_status
+      - location
+    exact_branch_conditions_released: false
+  - id: parallel_retrieval
+    disclosed_paths:
+      - tumour_treatment
+      - fertility_preservation
+      - legal_regulation
+    exact_index_and_top_k_released: false
+  - id: regional_legal_query
+    disclosed_behavior: use China-specific technical specifications in China; otherwise combine country and legal provisions
+    exact_query_template_released: false
+  - id: reranking
+    disclosed_model_family: gte-rerank
+    exact_model_version_and_threshold_released: false
+  - id: value_clarification
+    disclosed_behavior: elicit fertility goals and treatment priorities
+    exact_prompt_released: false
+  - id: response_generation
+    disclosed_behavior: produce personalized evidence-linked output for patient or clinician
+    exact_prompt_and_citation_schema_released: false
