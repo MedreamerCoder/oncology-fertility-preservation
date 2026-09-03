@@ -18,7 +18,7 @@ manuscript or the existing public JSON.
 | All three runs for five MCQ configurations | **Author action required** | Fill `templates/mcq_responses.csv` from original run logs |
 | Atomic scores from three automated judges | **Author action required** | Fill `templates/case_ratings.csv` |
 | Atomic scores from three blinded experts | **Author action required** | Fill `templates/case_ratings.csv` using pseudonymous evaluator IDs |
-| Exact automated-review prompts | **Author action required** | Add versioned files under `prompts/` |
+| Exact automated-review prompts | Included | `prompts/automated_judge_prompt.md` (source: `prompts/Supplementary_Appendix_5.docx`) |
 | Exact study prompts for every benchmark | **Author action required** | Add versioned files under `prompts/` |
 | Model/version/parameter/run metadata | **Author action required** | Add `metadata/model_runs.csv` and provider documentation |
 | Pre/post literacy item-level data | **Author action required** | Fill `templates/usability_literacy.csv` |
