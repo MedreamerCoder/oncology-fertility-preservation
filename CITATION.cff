@@ -1,0 +1,67 @@
+cff-version: 1.2.0
+message: "If you use the OncoFert-LLM study artifacts or reproducibility utilities, please cite the associated manuscript."
+title: "OncoFert-LLM reproducibility repository"
+type: software
+version: 0.1.0
+repository-code: "https://github.com/MedreamerCoder/oncology-fertility-preservation"
+authors:
+  - family-names: Cao
+    given-names: Qi
+  - family-names: Du
+    given-names: Siyu
+  - family-names: Guo
+    given-names: Jiawei
+  - family-names: Liu
+    given-names: Mei
+  - family-names: Hu
+    given-names: Yuanyuan
+  - family-names: Wu
+    given-names: Qiong
+  - family-names: Xue
+    given-names: Luqi
+  - family-names: Wulu
+    given-names: Kanxuan
+  - family-names: Li
+    given-names: Yaoxi
+  - family-names: Lin
+    given-names: Yong
+  - family-names: Liao
+    given-names: Xiuyong
+  - family-names: Huang
+    given-names: Wei
+  - family-names: Jiang
+    given-names: Ming
+  - family-names: Zhu
+    given-names: Huili
+preferred-citation:
+  type: article
+  title: "A specialty clinical generative AI framework with harm-aware benchmarking for oncofertility decision support"
+  authors:
+    - family-names: Cao
+      given-names: Qi
+    - family-names: Du
+      given-names: Siyu
+    - family-names: Guo
+      given-names: Jiawei
+    - family-names: Liu
+      given-names: Mei
+    - family-names: Hu
+      given-names: Yuanyuan
+    - family-names: Wu
+      given-names: Qiong
+    - family-names: Xue
+      given-names: Luqi
+    - family-names: Wulu
+      given-names: Kanxuan
+    - family-names: Li
+      given-names: Yaoxi
+    - family-names: Lin
+      given-names: Yong
+    - family-names: Liao
+      given-names: Xiuyong
+    - family-names: Huang
+      given-names: Wei
+    - family-names: Jiang
+      given-names: Ming
+    - family-names: Zhu
+      given-names: Huili
