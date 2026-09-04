@@ -24,7 +24,8 @@ This manifest maps manuscript commitments to the files needed for an independent
 | Retrieval pipeline configuration | Partially documented | `workflow/reference_architecture.yaml`; exact embedding, chunking, top-k, filters, reranking, prompt assembly, and fallback settings still require author confirmation |
 | Graph schema and import code | **Author action required** | Add Neo4j schema/constraints and de-identified import scripts under `knowledge_base/` or `scripts/` |
 | Frozen knowledge-base provenance | **Author action required** | Complete `knowledge_base/manifest.csv`; do not redistribute copyrighted texts without permission |
-| License and citation metadata | **Author decision required** | Add `LICENSE`, `CITATION.cff`, manuscript DOI/preprint URL, and data-use terms after approval |
+| Citation metadata | Included (partial) | `CITATION.cff` contains manuscript-derived title/authors; add final DOI/journal or preprint/release metadata when available |
+| Software/data license | **Author decision required** | Add `LICENSE` and any separate data-use terms after rightsholder approval |
 
 ## Release rule
 
