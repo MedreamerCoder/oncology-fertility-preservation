@@ -12,11 +12,11 @@ Use this checklist before creating the archival release/tag associated with the 
 - [ ] Confirm the Dify export contains no credentials, internal-only URLs, user identifiers, database connection strings, or other sensitive deployment information.
 - [ ] Add/verify retrieval configuration: embedding model/version, chunking, index settings, top-k, filters, gte-rerank version, prompt assembly, and fallback behavior.
 - [ ] Add Neo4j constraints/schema and de-identified graph import code.
-- [ ] Publish a knowledge-base provenance manifest with title, organization, version/date, URL/DOI, language, checksum, acquisition date, inclusion reason, and redistribution status for all 315 documents and six books.
+- [ ] Complete `knowledge_base/manifest.csv` with title, organization, version/date, URL/DOI, language, checksum, acquisition date, inclusion reason, and redistribution status for all 315 documents and six books.
 - [ ] Add raw item-level SUS, NPS, and literacy data after privacy review.
 - [ ] Run all tests and all analyses in a clean Python 3.11 environment.
 - [ ] Compare generated tables/statistics with the manuscript and resolve every discrepancy.
 - [ ] Choose and add software and data licenses approved by all rightsholders.
-- [ ] Add `CITATION.cff`, manuscript DOI/preprint URL, contact details, release tag, and an archived DOI (for example, Zenodo) after approval.
+- [ ] Update `CITATION.cff` with the final DOI/journal or preprint metadata, contact details where appropriate, release tag/version, and archived DOI (for example, Zenodo) after approval.
 - [ ] Have a clinician confirm the safety disclaimer and intended-use statement.
 - [ ] Revise the manuscript availability statements if any promised artifact cannot be released exactly as described.
