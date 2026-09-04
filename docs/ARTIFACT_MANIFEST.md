@@ -4,26 +4,26 @@ This manifest maps manuscript commitments to the files needed for an independent
 
 | Manuscript commitment | Status | Public artifact / action |
 |---|---|---|
-| 20 de-identified clinical cases | Included | `cases_rubric_modelResponse.json` |
-| Individualized scoring rubrics | Included | `cases_rubric_modelResponse.json` |
-| OncoFert-LLM, DeepSeek, and Qwen case answers | Included | `cases_rubric_modelResponse.json` |
+| 20 de-identified clinical cases | Included | `data/clinical_cases/cases_rubric_modelResponse.json` |
+| Individualized scoring rubrics | Included | `data/clinical_cases/cases_rubric_modelResponse.json` |
+| OncoFert-LLM, DeepSeek, and Qwen case answers | Included | `data/clinical_cases/cases_rubric_modelResponse.json` |
 | Validation and weighted-scoring code | Included (reconstructed) | `src/yuhub_repro/` |
 | Case comparison, ICC, bias, and bootstrap code | Included (reconstructed) | `src/yuhub_repro/case_analysis.py` |
 | MCQ analysis code | Included (reconstructed) | `src/yuhub_repro/mcq_analysis.py` |
 | Usability/literacy analysis code | Included (reconstructed) | `src/yuhub_repro/usability.py` |
-| 50-item MCQ benchmark and answer key | **Author action required** | Replace the placeholder `templates/mcq_items.csv` with the approved de-identified source file |
-| All three runs for five MCQ configurations | **Author action required** | Fill `templates/mcq_responses.csv` from original run logs |
-| Atomic scores from three automated judges | **Author action required** | Fill `templates/case_ratings.csv` from original evaluator records |
-| Atomic scores from three blinded experts | **Author action required** | Fill `templates/case_ratings.csv` using pseudonymous evaluator IDs |
+| 50-item MCQ benchmark and answer key | **Author action required** | Replace the placeholder `data/mcq/mcq_items.csv` with the approved de-identified source file |
+| All three runs for five MCQ configurations | **Author action required** | Fill `data/mcq/mcq_responses.csv` from original run logs |
+| Atomic scores from three automated judges | **Author action required** | Fill `data/ratings/case_ratings.csv` from original evaluator records |
+| Atomic scores from three blinded experts | **Author action required** | Fill `data/ratings/case_ratings.csv` using pseudonymous evaluator IDs |
 | Exact automated-review prompt | Included | `prompts/automated_judge_prompt.md` |
 | Exact study prompts for every benchmark | **Author action required** | Add versioned files under `prompts/` |
 | Model/version/parameter/run metadata | **Author action required** | Complete `metadata/model_runs.csv` and provider/version documentation |
-| Pre/post literacy item-level data | **Author action required** | Fill `templates/usability_literacy.csv` |
-| SUS and recommendation-likelihood item-level data | **Author action required** | Fill `templates/usability_literacy.csv` |
+| Pre/post literacy item-level data | **Author action required** | Fill `data/usability/usability_literacy.csv` |
+| SUS and recommendation-likelihood item-level data | **Author action required** | Fill `data/usability/usability_literacy.csv` |
 | Exact Dify workflow definitions | **Verification required** | `workflow/dify/生育力保存-V20260129.yml` is present; confirm that it is the exact sanitized DSL used for the reported study and document the export/version date |
 | Retrieval pipeline configuration | Partially documented | `workflow/reference_architecture.yaml`; exact embedding, chunking, top-k, filters, reranking, prompt assembly, and fallback settings still require author confirmation |
-| Graph schema and import code | **Author action required** | Add Neo4j schema/constraints and de-identified import scripts |
-| Frozen knowledge-base provenance | **Author action required** | Complete a document-level provenance manifest; do not redistribute copyrighted texts without permission |
+| Graph schema and import code | **Author action required** | Add Neo4j schema/constraints and de-identified import scripts under `knowledge_base/` or `scripts/` |
+| Frozen knowledge-base provenance | **Author action required** | Complete `knowledge_base/manifest.csv`; do not redistribute copyrighted texts without permission |
 | License and citation metadata | **Author decision required** | Add `LICENSE`, `CITATION.cff`, manuscript DOI/preprint URL, and data-use terms after approval |
 
 ## Release rule
