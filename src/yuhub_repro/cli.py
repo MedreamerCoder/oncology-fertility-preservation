@@ -18,7 +18,7 @@ def _write_csv_template(path: Path, columns: list[str]) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="YuHub study reproducibility utilities")
+    parser = argparse.ArgumentParser(description="OncoFert-LLM study reproducibility utilities")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     validate = subparsers.add_parser("validate", help="validate the public case JSON")
