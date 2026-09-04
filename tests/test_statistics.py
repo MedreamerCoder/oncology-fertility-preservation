@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from yuhub_repro.statistics import average_measure_icc, holm_adjust, paired_signflip_test
+from repro.statistics import average_measure_icc, holm_adjust, paired_signflip_test
 
 
 def test_icc_is_one_for_identical_raters():

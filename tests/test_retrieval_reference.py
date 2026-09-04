@@ -1,4 +1,4 @@
-from yuhub_repro.retrieval_reference import build_parallel_queries, regional_legal_query
+from repro.retrieval_reference import build_parallel_queries, regional_legal_query
 
 
 def test_china_legal_query_uses_disclosed_specification_terms():

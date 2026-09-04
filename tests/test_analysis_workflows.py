@@ -2,9 +2,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from yuhub_repro.case_analysis import analyze_case_ratings
-from yuhub_repro.mcq_analysis import analyze_mcq
-from yuhub_repro.usability import analyze_usability
+from repro.case_analysis import analyze_case_ratings
+from repro.mcq_analysis import analyze_mcq
+from repro.usability import analyze_usability
 
 
 def test_case_analysis_writes_reproducible_outputs(tmp_path: Path):
