@@ -10,7 +10,7 @@ This directory contains versioned prompts that were actually used in the study a
 
 The source DOCX used during manuscript preparation was intentionally removed from the repository after the Markdown prompt was published. The Markdown file above is therefore the public prompt artifact currently retained in version control.
 
-Model applicability: the judge prompt scores responses from OncoFert-LLM, DeepSeek, Qwen, and the other evaluated configurations on the de-identified clinical cases in `cases_rubric_modelResponse.json`.
+Model applicability: the judge prompt scores responses from OncoFert-LLM, DeepSeek, Qwen, and the other evaluated configurations on the de-identified clinical cases in `data/clinical_cases/cases_rubric_modelResponse.json`.
 
 ## Still pending
 
