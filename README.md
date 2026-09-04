@@ -14,6 +14,7 @@ The study describes a workflow-orchestrated, knowledge-graph-enhanced retrieval-
 
 ```text
 .
+├── CITATION.cff
 ├── README.md
 ├── SECURITY.md
 ├── data/
@@ -59,6 +60,7 @@ The Python module retains the legacy internal name `yuhub_repro` for compatibili
 - `data/mcq/`, `data/ratings/`, and `data/usability/` — structured locations for study-exact benchmark and evaluator records; current CSV files are templates until replaced with approved source data.
 - `knowledge_base/manifest.csv` — provenance-manifest template for the frozen knowledge base; source documents themselves should not be redistributed unless licensed.
 - `metadata/model_runs.csv` — model/provider/run metadata template.
+- `CITATION.cff` — citation metadata derived from the current manuscript title and author list; add the final DOI/publication metadata when available.
 - `docs/` — artifact manifest, data dictionary, reproducibility notes, and release checklist.
 - `tests/` and `.github/workflows/tests.yml` — automated tests and CI.
 
@@ -109,4 +111,4 @@ Do not replace missing study artifacts with reconstructed or plausible substitut
 
 ## Citation and license
 
-Citation metadata, software licensing, and data-use terms should be approved by the study authors before the archival public release. Add `CITATION.cff`, the manuscript DOI/preprint link, and the approved license when available.
+`CITATION.cff` now contains the manuscript-derived title and author list. Update it with the final DOI, journal/preprint information, and archival release metadata once available. The software license and any separate data-use terms still require author/rightsholder approval and are intentionally not invented here.
