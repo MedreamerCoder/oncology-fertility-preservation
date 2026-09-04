@@ -18,8 +18,7 @@ dependencies = [
 test = ["pytest>=8,<9"]
 
 [project.scripts]
-oncofert-repro = "yuhub_repro.cli:main"
-yuhub-repro = "yuhub_repro.cli:main"
+oncofert-repro = "repro.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

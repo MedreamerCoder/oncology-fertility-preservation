@@ -40,7 +40,7 @@ The study describes a workflow-orchestrated, knowledge-graph-enhanced retrieval-
 ├── results/
 ├── scripts/
 ├── src/
-│   └── yuhub_repro/
+│   └── repro/
 ├── tests/
 └── workflow/
     ├── reference_architecture.yaml
@@ -48,7 +48,7 @@ The study describes a workflow-orchestrated, knowledge-graph-enhanced retrieval-
         └── 生育力保存-V20260129.yml
 ```
 
-The Python module retains the legacy internal name `yuhub_repro` for compatibility with the existing analysis code. The study-facing project name is **OncoFert-LLM**.
+The Python package used by the reproducibility utilities is `repro`. The study-facing project name is **OncoFert-LLM**.
 
 ## What is included
 
@@ -56,7 +56,7 @@ The Python module retains the legacy internal name `yuhub_repro` for compatibili
 - `prompts/automated_judge_prompt.md` — released automated-judge prompt used for case scoring.
 - `workflow/reference_architecture.yaml` — manuscript-derived reference architecture.
 - `workflow/dify/生育力保存-V20260129.yml` — Dify DSL export currently present in the repository; authors should verify that it is the exact sanitized workflow version used for the reported study before marking the workflow artifact as fully released.
-- `src/yuhub_repro/` — reproducibility utilities for validation, weighted scoring, case-level analyses, MCQ analyses, usability summaries, ICCs, and clustered bootstrap confidence intervals.
+- `src/repro/` — reproducibility utilities for validation, weighted scoring, case-level analyses, MCQ analyses, usability summaries, ICCs, and clustered bootstrap confidence intervals.
 - `data/mcq/`, `data/ratings/`, and `data/usability/` — structured locations for study-exact benchmark and evaluator records; current CSV files are templates until replaced with approved source data.
 - `knowledge_base/manifest.csv` — provenance-manifest template for the frozen knowledge base; source documents themselves should not be redistributed unless licensed.
 - `metadata/model_runs.csv` — model/provider/run metadata template.
@@ -71,26 +71,26 @@ Python 3.11 is recommended.
 ```bash
 python -m venv .venv
 python -m pip install -e .
-python -m yuhub_repro validate data/clinical_cases/cases_rubric_modelResponse.json
-python -m yuhub_repro summarize data/clinical_cases/cases_rubric_modelResponse.json
+python -m repro validate data/clinical_cases/cases_rubric_modelResponse.json
+python -m repro summarize data/clinical_cases/cases_rubric_modelResponse.json
 ```
 
 Create or refresh analysis-ready templates:
 
 ```bash
-python -m yuhub_repro make-ratings-template \
+python -m repro make-ratings-template \
   data/clinical_cases/cases_rubric_modelResponse.json data/ratings/case_ratings.csv
-python -m yuhub_repro make-mcq-template data/mcq/mcq_responses.csv
+python -m repro make-mcq-template data/mcq/mcq_responses.csv
 ```
 
 After replacing/filling the templates with the original study records:
 
 ```bash
-python -m yuhub_repro analyze-cases \
+python -m repro analyze-cases \
   data/ratings/case_ratings.csv results/cases \
   --cases data/clinical_cases/cases_rubric_modelResponse.json
-python -m yuhub_repro analyze-mcq data/mcq/mcq_responses.csv results/mcq
-python -m yuhub_repro analyze-usability data/usability/usability_literacy.csv results/usability
+python -m repro analyze-mcq data/mcq/mcq_responses.csv results/mcq
+python -m repro analyze-usability data/usability/usability_literacy.csv results/usability
 ```
 
 Each analysis writes tidy CSV outputs plus a JSON summary containing the random seed, bootstrap count, input hash, software versions, and statistical results.

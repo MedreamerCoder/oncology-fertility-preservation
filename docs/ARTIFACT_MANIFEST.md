@@ -7,10 +7,10 @@ This manifest maps manuscript commitments to the files needed for an independent
 | 20 de-identified clinical cases | Included | `data/clinical_cases/cases_rubric_modelResponse.json` |
 | Individualized scoring rubrics | Included | `data/clinical_cases/cases_rubric_modelResponse.json` |
 | OncoFert-LLM, DeepSeek, and Qwen case answers | Included | `data/clinical_cases/cases_rubric_modelResponse.json` |
-| Validation and weighted-scoring code | Included (reconstructed) | `src/yuhub_repro/` |
-| Case comparison, ICC, bias, and bootstrap code | Included (reconstructed) | `src/yuhub_repro/case_analysis.py` |
-| MCQ analysis code | Included (reconstructed) | `src/yuhub_repro/mcq_analysis.py` |
-| Usability/literacy analysis code | Included (reconstructed) | `src/yuhub_repro/usability.py` |
+| Validation and weighted-scoring code | Included (reconstructed) | `src/repro/` |
+| Case comparison, ICC, bias, and bootstrap code | Included (reconstructed) | `src/repro/case_analysis.py` |
+| MCQ analysis code | Included (reconstructed) | `src/repro/mcq_analysis.py` |
+| Usability/literacy analysis code | Included (reconstructed) | `src/repro/usability.py` |
 | 50-item MCQ benchmark and answer key | **Author action required** | Replace the placeholder `data/mcq/mcq_items.csv` with the approved de-identified source file |
 | All three runs for five MCQ configurations | **Author action required** | Fill `data/mcq/mcq_responses.csv` from original run logs |
 | Atomic scores from three automated judges | **Author action required** | Fill `data/ratings/case_ratings.csv` from original evaluator records |

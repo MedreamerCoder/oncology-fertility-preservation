@@ -1,6 +1,6 @@
 import pandas as pd
 
-from yuhub_repro.scoring import aggregate_weighted_scores, consensus_scores
+from repro.scoring import aggregate_weighted_scores, consensus_scores
 
 
 def test_weighted_scores_and_consensus():
