@@ -1,33 +1,30 @@
 # Prompt release directory
 
-Add the exact, versioned prompts used in the study here. At minimum publish:
-
-- MCQ system and user prompt templates;
-- clinical-case system and user prompt templates for every configuration;
-- automated-judge system prompt and scoring prompt;
-- structured-output schema and retry/error-handling instructions;
-- prompt version, checksum, language, model applicability, and change log.
+This directory contains versioned prompts that were actually used in the study and are approved for public release. Do not add reconstructed or approximate prompts and label them as original study artifacts.
 
 ## Published prompts
 
 | File | Version | Language | Role | SHA-256 |
 |---|---|---|---|---|
-| `automated_judge_prompt.md` | 1.0.0 | English | Automated-judge system prompt: item-by-item binary (safety red-line) and graded (efficacy) scoring of model responses | `33d275ca0babe79844867ab75f6ee2821cac0e2ca69e97bda47a3e205999310c` |
-| `Supplementary_Appendix_5.docx` | 1.0.0 | English | Source document (manuscript Supplementary Appendix 5) containing the prompt verbatim | `d4b4b2c6671ce5d24ae19341f1f2b73067f58665e5bd9403ff4cd5d66f871f34` |
+| `automated_judge_prompt.md` | 1.0.0 | English | Automated-judge system prompt for item-by-item binary safety scoring and graded effectiveness scoring of model responses | `33d275ca0babe79844867ab75f6ee2821cac0e2ca69e97bda47a3e205999310c` |
 
-Model applicability: the judge prompt scores responses from every evaluated
-model (YuHub, DeepSeek, Qwen, and other compared models) on the 20
-de-identified clinical cases in `cases_rubric_modelResponse.json`.
+The source DOCX used during manuscript preparation was intentionally removed from the repository after the Markdown prompt was published. The Markdown file above is therefore the public prompt artifact currently retained in version control.
 
-### Change log
-
-- 2026-09-03 — v1.0.0: published the automated-judge system prompt (English),
-  extracted verbatim from manuscript Supplementary Appendix 5.
+Model applicability: the judge prompt scores responses from OncoFert-LLM, DeepSeek, Qwen, and the other evaluated configurations on the de-identified clinical cases in `cases_rubric_modelResponse.json`.
 
 ## Still pending
 
-The remaining study prompts (MCQ and clinical-case system/user templates for
-every configuration, structured-output schema, and retry/error-handling
-instructions) are not yet published. Creating plausible replacements would
-misrepresent the methods, so these rows stay open until the exact artifacts
-are supplied.
+The repository still needs the exact, versioned study prompts for:
+
+- MCQ system and user templates;
+- clinical-case system and user templates for each evaluated configuration;
+- structured-output schemas used during benchmark generation;
+- retry and error-handling instructions where applicable;
+- prompt version, checksum, language, model applicability, and change log for each released prompt.
+
+If any exact prompt cannot be released, document that limitation explicitly in `docs/ARTIFACT_MANIFEST.md` and reconcile the manuscript availability statement.
+
+## Change log
+
+- 2026-09-03 — v1.0.0: published `automated_judge_prompt.md` from Supplementary Appendix 5.
+- 2026-09-03 — removed the source DOCX after the prompt was preserved in Markdown.
